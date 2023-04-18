@@ -23,7 +23,7 @@
 	<body>
 		<main class="min-vh-100 bg-body-secondary py-5">
 			<!-- FORM -->
-			<div class="container mb-5">
+			<div class="container mb-5 px-5">
 				<h1 class="display-3 text-center">Inscríbete</h1>
 				<form class="row row-cols-2" id="userData">
 					<div class="mb-3">
@@ -47,7 +47,10 @@
 						<input class="form-control" type="tel" name="about" id="about" />
 					</div>
 					<div>
-						<button class="btn btn-primary btn-lg w-50 rounded-0">
+						<button
+							type="submit"
+							class="btn btn-secondary btn-lg w-50 rounded-0"
+						>
 							ENVIAR
 						</button>
 					</div>
@@ -66,8 +69,8 @@
 							src="https://picsum.photos/id/1011/600/600"
 							alt=""
 						/>
-						<h5 id="userName">Milton</h5>
-						<h6 id="userJob">Front End Dev</h6>
+						<h5 id="userName"></h5>
+						<h6 id="userJob"></h6>
 					</div>
 					<div class="col-md-8">
 						<div class="card-body">
@@ -76,20 +79,16 @@
 							<div class="row row-cols-2">
 								<div>
 									<h6>Email</h6>
-									<p id="userMail">email@email.com</p>
+									<p id="userMail"></p>
 								</div>
 								<div>
 									<h6>Phone</h6>
-									<p id="userPhone">3333333</p>
+									<p id="userPhone"></p>
 								</div>
 							</div>
-							<h5 class="card-title">Sobre mi</h5>
+							<h5 class="card-title mt-3">Sobre mi</h5>
 							<hr />
-							<p class="card-text" id="userAbout">
-								This is a wider card with supporting text below as a natural
-								lead-in to additional content. This content is a little bit
-								longer.
-							</p>
+							<p class="card-text" id="userAbout"></p>
 						</div>
 					</div>
 				</div>
