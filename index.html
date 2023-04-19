@@ -21,48 +21,48 @@
 		<title>Document</title>
 	</head>
 	<body>
-		<main class="min-vh-100 bg-body-secondary py-5">
+		<main class="min-vh-100 bg-body-secondary p-5">
 			<!-- FORM -->
-			<div class="container mb-5 px-5">
+			<div class="container mb-5">
 				<h1 class="display-3 text-center">Inscríbete</h1>
-				<form class="row row-cols-2" id="userData">
-					<div class="mb-3">
+				<form class="row" id="inputData">
+					<div class="col-12 col-lg-6 mb-3">
 						<label class="form-label" for="name">Nombre</label>
 						<input
 							class="form-control"
 							type="text"
 							name="name"
-							id="name"
+							id="inputName"
 							required
 						/>
 					</div>
-					<div class="mb-3">
+					<div class="col-12 col-lg-6 mb-3">
 						<label class="form-label" for="email">Correo</label>
 						<input
 							class="form-control"
 							type="email"
 							name="email"
-							id="email"
+							id="inputEmail"
 							required
 						/>
 					</div>
-					<div class="mb-3">
+					<div class="col-12 col-lg-6 mb-3">
 						<label class="form-label" for="job">Trabajo</label>
 						<input
 							class="form-control"
 							type="text"
 							name="job"
-							id="job"
+							id="inputJob"
 							required
 						/>
 					</div>
-					<div class="mb-3">
+					<div class="col-12 col-lg-6 mb-3">
 						<label class="form-label" for="phone">Telefono</label>
 						<input
 							class="form-control"
 							type="tel"
 							name="phone"
-							id="phone"
+							id="inputPhone"
 							required
 						/>
 					</div>
@@ -70,17 +70,14 @@
 						<label class="form-label" for="about">Sobre ti</label>
 						<input
 							class="form-control"
-							type="tel"
+							type="text"
 							name="about"
-							id="about"
+							id="inputAbout"
 							required
 						/>
 					</div>
-					<div>
-						<button
-							type="submit"
-							class="btn btn-secondary btn-lg w-50 rounded-0"
-						>
+					<div class="col-6">
+						<button type="submit" class="btn btn-secondary btn-lg rounded-0">
 							ENVIAR
 						</button>
 					</div>
@@ -89,10 +86,13 @@
 			<!-- FORM END -->
 
 			<!-- DISPLAY CARD -->
-			<div class="mx-auto card mb-3 shadow-lg" style="max-width: 540px">
+			<div
+				class="mx-auto card mb-3 shadow-lg px-2 px-lg-0"
+				style="max-width: 540px"
+			>
 				<div class="row g-3">
 					<div
-						class="rounded-start col-md-4 bg-secondary text-light px-4 text-center d-flex flex-column justify-content-center"
+						class="lg-rounded-start col-md-4 bg-secondary text-light px-4 text-center d-flex flex-column justify-content-center"
 					>
 						<img
 							class="img-fluid rounded-circle"
@@ -106,12 +106,12 @@
 						<div class="card-body">
 							<h5 class="card-title">Información</h5>
 							<hr />
-							<div class="row row-cols-2">
-								<div>
+							<div class="row">
+								<div class="col-12 col-lg-6">
 									<h6>Email</h6>
 									<p id="userMail"></p>
 								</div>
-								<div>
+								<div class="col-12 col-lg-6">
 									<h6>Phone</h6>
 									<p id="userPhone"></p>
 								</div>

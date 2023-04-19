@@ -1,14 +1,3 @@
-let form = document.getElementById('userData');
-let inputName = document.getElementById('name');
-let inputEmail = document.getElementById('email');
-let inputJob = document.getElementById('job');
-let inputPhone = document.getElementById('phone');
-let inputAbout = document.getElementById('about');
-let displayName = document.getElementById('userName');
-let displayMail = document.getElementById('userMail');
-let displayJob = document.getElementById('userJob');
-let displayPhone = document.getElementById('userPhone');
-let displayAbout = document.getElementById('userAbout');
 let mailPattern = /\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/;
 let phonePattern = /^(\+?(56)?)(0?9)[987654321]\d{7}$/;
 
@@ -20,19 +9,8 @@ function User(name, email, job, phone, about) {
 	this.phone = phone;
 	this.about = about;
 }
-let validarInput = (input, pattern) => {
-	return pattern.test(input);
-};
 
-let llenarCard = (user) => {
-	displayName.innerHTML = user.name;
-	displayMail.innerHTML = user.email;
-	displayJob.innerHTML = user.job;
-	displayPhone.innerHTML = user.phone;
-	displayAbout.innerHTML = user.about;
-};
-
-form.addEventListener('submit', (event) => {
+inputData.addEventListener('submit', (event) => {
 	event.preventDefault();
 	// Construye usuario con datos capturados del form
 	if (
@@ -46,8 +24,21 @@ form.addEventListener('submit', (event) => {
 			inputPhone.value,
 			inputAbout.value
 		);
-		llenarCard(usuario);
+		rellenarCard(usuario);
 	} else {
 		alert('Asegúrese de llenar los datos de Email y Teléfono');
 	}
 });
+
+let validarInput = (input, pattern) => {
+	return pattern.test(input);
+};
+
+// Rellena card con datos capturados
+let rellenarCard = (cliente) => {
+	userName.innerHTML = cliente.name;
+	userMail.innerHTML = cliente.email;
+	userJob.innerHTML = cliente.job;
+	userPhone.innerHTML = cliente.phone;
+	userAbout.innerHTML = cliente.about;
+};
